@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "newfound_battles:tungsten_nugget_from_tungsten_smelting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_tungsten": {
+      "conditions": {
+        "items": [
+          {
+            "items": "newfound_battles:tungsten"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_tungsten"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "newfound_battles:tungsten_nugget_from_tungsten_smelting"
+    ]
+  }
+}

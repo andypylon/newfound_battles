@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "newfound_battles:tungsten_bar"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "newfound_battles:tungsten_nugget"
+  }
+}

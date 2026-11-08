@@ -13,7 +13,10 @@ import org.apache.logging.log4j.LogManager
 import org.apache.logging.log4j.Logger
 import thedarkcolour.kotlinforforge.neoforge.forge.MOD_BUS
 import thedarkcolour.kotlinforforge.neoforge.forge.runForDist
-
+import org.sbt.newfound_battles.datagen.DataGenerators
+import org.sbt.newfound_battles.item.ModItems
+import net.minecraft.world.item.CreativeModeTabs
+import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent
 /**
  * Main mod class.
  *
@@ -42,6 +45,9 @@ object Newfound_battles {
         })
 
         println(obj)
+        ModItems.REGISTRY.register(MOD_BUS)
+        MOD_BUS.addListener(DataGenerators::gatherData)
+        MOD_BUS.addListener(::addCreative)
     }
 
     /**
@@ -63,5 +69,16 @@ object Newfound_battles {
     @SubscribeEvent
     fun onCommonSetup(event: FMLCommonSetupEvent) {
         LOGGER.log(Level.INFO, "Hello! This is working!")
+    }
+
+    private fun addCreative(event: BuildCreativeModeTabContentsEvent) {
+        if (event.tabKey == CreativeModeTabs.NATURAL_BLOCKS) {
+            event.accept(ModItems.TUNGSTEN_ORE_ITEM)
+        }
+        if (event.tabKey == CreativeModeTabs.INGREDIENTS) {
+            event.accept(ModItems.TUNGSTEN)
+            event.accept(ModItems.TUNGSTEN_BAR)
+            event.accept(ModItems.TUNGSTEN_NUGGET)
+        }
     }
 }
