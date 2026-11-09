@@ -10,5 +10,9 @@ class ModLanguageProvider(out: PackOutput, id: String, locale: String) :
         addItem(ModItems.TUNGSTEN, "Raw Tungsten")
         addItem(ModItems.TUNGSTEN_BAR, "Tungsten Bar")
         addItem(ModItems.TUNGSTEN_NUGGET, "Tungsten Nugget")
+        addItem(ModItems.TUNGSTEN_HELMET, "Tungsten Helmet")
+        addItem(ModItems.TUNGSTEN_CHESTPLATE, "Tungsten Chestplate")
+        addItem(ModItems.TUNGSTEN_LEGGINGS, "Tungsten Leggings")
+        addItem(ModItems.TUNGSTEN_BOOTS, "Tungsten Boots")
     }
 }

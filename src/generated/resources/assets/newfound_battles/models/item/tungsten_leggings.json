@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "newfound_battles:item/tungsten_leggings"
+  }
+}

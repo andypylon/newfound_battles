@@ -17,6 +17,8 @@ import org.sbt.newfound_battles.datagen.DataGenerators
 import org.sbt.newfound_battles.item.ModItems
 import net.minecraft.world.item.CreativeModeTabs
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent
+import org.sbt.newfound_battles.item.ModArmorMaterials
+
 /**
  * Main mod class.
  *
@@ -48,6 +50,7 @@ object Newfound_battles {
         ModItems.REGISTRY.register(MOD_BUS)
         MOD_BUS.addListener(DataGenerators::gatherData)
         MOD_BUS.addListener(::addCreative)
+        ModArmorMaterials.REGISTRY.register(MOD_BUS)
     }
 
     /**
@@ -79,6 +82,9 @@ object Newfound_battles {
             event.accept(ModItems.TUNGSTEN)
             event.accept(ModItems.TUNGSTEN_BAR)
             event.accept(ModItems.TUNGSTEN_NUGGET)
+        }
+        if (event.tabKey == CreativeModeTabs.COMBAT) {
+            ModItems.TUNGSTEN_ARMOR.forEach { event.accept(it) }
         }
     }
 }

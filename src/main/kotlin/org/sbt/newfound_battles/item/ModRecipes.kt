@@ -40,12 +40,14 @@ object ModRecipes {
         Shaped(big, listOf("###", "###", "###"), mapOf('#' to small)),
         Shapeless(small, mapOf(big to 1), count = 9),
     )
+    fun armorSet(material: ItemLike, helmet: ItemLike, chest: ItemLike, legs: ItemLike, boots: ItemLike): List<Craft> = listOf(
+        Shaped(helmet, listOf("###", "# #"), mapOf('#' to material)),
+        Shaped(chest, listOf("# #", "###", "###"), mapOf('#' to material)),
+        Shaped(legs, listOf("###", "# #", "# #"), mapOf('#' to material)),
+        Shaped(boots, listOf("# #", "# #"), mapOf('#' to material)),
+    )
 
     val CRAFTING: List<Craft> =
         compress(ModItems.TUNGSTEN_NUGGET, ModItems.TUNGSTEN_BAR) +
-                listOf(
-                    // any one-off recipe is just another entry, e.g.:
-                    // Shaped(ModItems.TUNGSTEN_PICKAXE, listOf("###", " S ", " S "),
-                    //        mapOf('#' to ModItems.TUNGSTEN_BAR, 'S' to Items.STICK)),
-                )
+        armorSet(ModItems.TUNGSTEN_BAR, ModItems.TUNGSTEN_HELMET, ModItems.TUNGSTEN_CHESTPLATE, ModItems.TUNGSTEN_LEGGINGS, ModItems.TUNGSTEN_BOOTS)
 }
