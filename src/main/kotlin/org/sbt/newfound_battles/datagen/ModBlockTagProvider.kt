@@ -4,6 +4,7 @@ import net.minecraft.data.PackOutput
 import net.minecraft.tags.BlockTags
 import net.neoforged.neoforge.common.data.BlockTagsProvider
 import net.neoforged.neoforge.common.data.ExistingFileHelper
+import org.sbt.newfound_battles.ModTags
 import org.sbt.newfound_battles.block.ModBlocks
 import java.util.concurrent.CompletableFuture
 class ModBlockTagProvider(
@@ -13,5 +14,10 @@ class ModBlockTagProvider(
     override fun addTags(provider: HolderLookup.Provider) {
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(ModBlocks.TUNGSTEN_ORE.get())
         tag(BlockTags.NEEDS_IRON_TOOL).add(ModBlocks.TUNGSTEN_ORE.get())
+        tag(ModTags.Blocks.INCORRECT_FOR_TUNGSTEN_TOOL).addTag(BlockTags.INCORRECT_FOR_DIAMOND_TOOL)
+        tag(ModTags.Blocks.MINEABLE_WITH_PAXEL)
+            .addTag(BlockTags.MINEABLE_WITH_PICKAXE)
+            .addTag(BlockTags.MINEABLE_WITH_AXE)
+            .addTag(BlockTags.MINEABLE_WITH_SHOVEL)
     }
 }

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "newfound_battles:tungsten_paxel_shapeless"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_tungsten_pickaxe": {
+      "conditions": {
+        "items": [
+          {
+            "items": "newfound_battles:tungsten_pickaxe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_tungsten_pickaxe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "newfound_battles:tungsten_paxel_shapeless"
+    ]
+  }
+}

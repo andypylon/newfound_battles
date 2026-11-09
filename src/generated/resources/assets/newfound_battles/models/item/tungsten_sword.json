@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "newfound_battles:item/tungsten_sword"
+  }
+}

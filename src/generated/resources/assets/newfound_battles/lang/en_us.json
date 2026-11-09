@@ -1,10 +1,17 @@
 {
   "block.newfound_battles.tungsten_ore": "Tungsten Ore",
   "item.newfound_battles.tungsten": "Raw Tungsten",
+  "item.newfound_battles.tungsten_axe": "Tungsten Axe",
   "item.newfound_battles.tungsten_bar": "Tungsten Bar",
   "item.newfound_battles.tungsten_boots": "Tungsten Boots",
   "item.newfound_battles.tungsten_chestplate": "Tungsten Chestplate",
   "item.newfound_battles.tungsten_helmet": "Tungsten Helmet",
+  "item.newfound_battles.tungsten_hoe": "Tungsten Hoe",
   "item.newfound_battles.tungsten_leggings": "Tungsten Leggings",
-  "item.newfound_battles.tungsten_nugget": "Tungsten Nugget"
+  "item.newfound_battles.tungsten_nugget": "Tungsten Nugget",
+  "item.newfound_battles.tungsten_paxel": "Tungsten Paxel",
+  "item.newfound_battles.tungsten_pickaxe": "Tungsten Pickaxe",
+  "item.newfound_battles.tungsten_shovel": "Tungsten Shovel",
+  "item.newfound_battles.tungsten_sword": "Tungsten Sword",
+  "tooltip.newfound_battles.tungsten_paxel": "The might of the tungsten tools, combined."
 }

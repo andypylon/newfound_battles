@@ -10,5 +10,6 @@ class ModItemModelProvider(out: PackOutput, id: String, files: ExistingFileHelpe
         basicItem(ModItems.TUNGSTEN_BAR.get())
         basicItem(ModItems.TUNGSTEN_NUGGET.get())
         ModItems.TUNGSTEN_ARMOR.forEach { basicItem(it.get())}
+        ModItems.TUNGSTEN_TOOLS.forEach { handheldItem(it.get()) }
     }
 }

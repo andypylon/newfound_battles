@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "newfound_battles:tungsten_pickaxe"
+    },
+    {
+      "item": "newfound_battles:tungsten_axe"
+    },
+    {
+      "item": "newfound_battles:tungsten_shovel"
+    },
+    {
+      "item": "newfound_battles:tungsten_bar"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "newfound_battles:tungsten_paxel"
+  }
+}

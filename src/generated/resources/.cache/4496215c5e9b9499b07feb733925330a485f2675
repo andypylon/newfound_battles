@@ -1,3 +1,5 @@
-// 1.21.1	2026-11-08T23:08:08.068568821	Tags for minecraft:block mod id newfound_battles
+// 1.21.1	2026-11-09T13:20:39.347771924	Tags for minecraft:block mod id newfound_battles
 1bdd4cac28563b3ace0dddaa0723d90e25024aa2 data/minecraft/tags/block/mineable/pickaxe.json
 1bdd4cac28563b3ace0dddaa0723d90e25024aa2 data/minecraft/tags/block/needs_iron_tool.json
+f57a1c0d935679dbbcab3f2e8a06cae2238a6735 data/newfound_battles/tags/block/incorrect_for_tungsten_tool.json
+82362cfbd1836db13c7e9d36c8712821e795ac55 data/newfound_battles/tags/block/mineable/paxel.json

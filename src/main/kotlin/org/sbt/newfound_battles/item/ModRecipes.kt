@@ -1,5 +1,6 @@
 package org.sbt.newfound_battles.item
 
+import net.minecraft.world.item.Items
 import net.minecraft.world.level.ItemLike
 import org.sbt.newfound_battles.block.ModBlocks
 
@@ -46,8 +47,26 @@ object ModRecipes {
         Shaped(legs, listOf("###", "# #", "# #"), mapOf('#' to material)),
         Shaped(boots, listOf("# #", "# #"), mapOf('#' to material)),
     )
+    fun toolSet(bar: ItemLike, handle: ItemLike, sword: ItemLike, pickaxe: ItemLike,
+                axe: ItemLike, shovel: ItemLike, hoe: ItemLike): List<Craft> {
+        val keys = mapOf('#' to bar, 'S' to handle)
+        return listOf(
+            Shaped(sword,   listOf("#", "#", "S"), keys),
+            Shaped(pickaxe, listOf("###", " S ", " S "), keys),
+            Shaped(axe,     listOf("##", "#S", " S"), keys),
+            Shaped(shovel,  listOf("#", "S", "S"), keys),
+            Shaped(hoe,     listOf("##", " S", " S"), keys),
+        )
+    }
 
     val CRAFTING: List<Craft> =
         compress(ModItems.TUNGSTEN_NUGGET, ModItems.TUNGSTEN_BAR) +
-        armorSet(ModItems.TUNGSTEN_BAR, ModItems.TUNGSTEN_HELMET, ModItems.TUNGSTEN_CHESTPLATE, ModItems.TUNGSTEN_LEGGINGS, ModItems.TUNGSTEN_BOOTS)
+        armorSet(ModItems.TUNGSTEN_BAR, ModItems.TUNGSTEN_HELMET, ModItems.TUNGSTEN_CHESTPLATE, ModItems.TUNGSTEN_LEGGINGS, ModItems.TUNGSTEN_BOOTS) +
+        toolSet(ModItems.TUNGSTEN_BAR, Items.STICK, ModItems.TUNGSTEN_SWORD, ModItems.TUNGSTEN_PICKAXE,
+         ModItems.TUNGSTEN_AXE, ModItems.TUNGSTEN_SHOVEL, ModItems.TUNGSTEN_HOE) +
+         listOf(
+         Shapeless(ModItems.TUNGSTEN_PAXEL, mapOf(
+           ModItems.TUNGSTEN_PICKAXE to 1, ModItems.TUNGSTEN_AXE to 1,
+           ModItems.TUNGSTEN_SHOVEL to 1, ModItems.TUNGSTEN_BAR to 1)),
+           )
 }

@@ -1,0 +1,13 @@
+// 1.21.1	2026-11-09T13:06:28.633986848	Tags for minecraft:item mod id newfound_battles
+0aadd24a83adc5d007520147a491ae3addd13ef3 data/minecraft/tags/item/enchantable/armor.json
+0459343291c9f5d7b279ad34c558da6576f7db94 data/minecraft/tags/item/enchantable/chest_armor.json
+615f0ccb4bff9a897580275bc2430c2c92610335 data/minecraft/tags/item/enchantable/durability.json
+efbbf3160b556ffd0fad2639d28921aa13d088d5 data/minecraft/tags/item/enchantable/fire_aspect.json
+f53d15dcbf8c4adb8f973c6e3582713346e8a0fc data/minecraft/tags/item/enchantable/foot_armor.json
+dd763e3cb5a2d89b6f513fb5292bc8c41cad0aaa data/minecraft/tags/item/enchantable/head_armor.json
+f2b330f0b887a2069b8472877350cc2c8e813a72 data/minecraft/tags/item/enchantable/leg_armor.json
+1bbd1ee6e491f102ebe849768b91c8b289550d68 data/minecraft/tags/item/enchantable/mining.json
+1bbd1ee6e491f102ebe849768b91c8b289550d68 data/minecraft/tags/item/enchantable/mining_loot.json
+15e2bb4f01d33713f53f817ff2cb13747a427908 data/minecraft/tags/item/enchantable/sharp_weapon.json
+efbbf3160b556ffd0fad2639d28921aa13d088d5 data/minecraft/tags/item/enchantable/sword.json
+15e2bb4f01d33713f53f817ff2cb13747a427908 data/minecraft/tags/item/enchantable/weapon.json
