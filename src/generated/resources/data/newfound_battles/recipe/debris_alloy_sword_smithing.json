@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "newfound_battles:debris_alloy_bar"
+  },
+  "base": {
+    "item": "newfound_battles:alloy_sword"
+  },
+  "result": {
+    "count": 1,
+    "id": "newfound_battles:debris_alloy_sword"
+  },
+  "template": {
+    "item": "minecraft:netherite_upgrade_smithing_template"
+  }
+}

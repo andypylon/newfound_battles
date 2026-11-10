@@ -9,6 +9,7 @@ import net.minecraft.data.recipes.RecipeProvider
 import net.minecraft.data.recipes.ShapedRecipeBuilder
 import net.minecraft.data.recipes.ShapelessRecipeBuilder
 import net.minecraft.data.recipes.SimpleCookingRecipeBuilder
+import net.minecraft.data.recipes.SmithingTransformRecipeBuilder
 import net.minecraft.resources.ResourceLocation
 import net.minecraft.world.item.crafting.Ingredient
 import net.minecraft.world.level.ItemLike
@@ -29,11 +30,19 @@ class ModRecipeProvider(out: PackOutput, registries: CompletableFuture<HolderLoo
                 is ModRecipes.Shapeless -> shapeless(output, it)
             }
         }
+        ModRecipes.SMITHING.forEach { smith(output, it) }
     }
 
     private fun name(item: ItemLike) = BuiltInRegistries.ITEM.getKey(item.asItem()).path
     private fun rl(path: String) = ResourceLocation.fromNamespaceAndPath(Newfound_battles.ID, path)
-
+    private fun smith(out: RecipeOutput, s: ModRecipes.Smith) {
+        SmithingTransformRecipeBuilder.smithing(
+            Ingredient.of(s.template), Ingredient.of(s.base), Ingredient.of(s.addition),
+            s.category, s.result.asItem()
+        )
+            .unlocks("has_${name(s.addition)}", has(s.addition))
+            .save(out, rl("${name(s.result)}_smithing"))
+    }
     private fun smelt(out: RecipeOutput, s: ModRecipes.Smelt) {
         val base = "${name(s.result)}_from_${name(s.input)}"
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(s.input), RecipeCategory.MISC, s.result, s.xp, 200)

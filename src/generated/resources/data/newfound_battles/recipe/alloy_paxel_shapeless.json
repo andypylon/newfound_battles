@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "newfound_battles:alloy_pickaxe"
+    },
+    {
+      "item": "newfound_battles:alloy_axe"
+    },
+    {
+      "item": "newfound_battles:alloy_shovel"
+    },
+    {
+      "item": "newfound_battles:platinum_rhodium_alloy_bar"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "newfound_battles:alloy_paxel"
+  }
+}

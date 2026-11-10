@@ -14,10 +14,14 @@ class ModBlockTagProvider(
     override fun addTags(provider: HolderLookup.Provider) {
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(ModBlocks.TUNGSTEN_ORE.get())
         tag(BlockTags.NEEDS_IRON_TOOL).add(ModBlocks.TUNGSTEN_ORE.get())
-        tag(ModTags.Blocks.INCORRECT_FOR_TUNGSTEN_TOOL).addTag(BlockTags.INCORRECT_FOR_DIAMOND_TOOL)
+        tag(ModTags.Blocks.INCORRECT_FOR_TUNGSTEN_TOOL).addTag(BlockTags.INCORRECT_FOR_IRON_TOOL)
         tag(ModTags.Blocks.MINEABLE_WITH_PAXEL)
             .addTag(BlockTags.MINEABLE_WITH_PICKAXE)
             .addTag(BlockTags.MINEABLE_WITH_AXE)
             .addTag(BlockTags.MINEABLE_WITH_SHOVEL)
+        tag(BlockTags.NEEDS_DIAMOND_TOOL).add(ModBlocks.RHODIUM_ORE.get())
+        tag(BlockTags.NEEDS_DIAMOND_TOOL).add(ModBlocks.PLATINUM_ORE.get())
+        tag(BlockTags.MINEABLE_WITH_PICKAXE).add(ModBlocks.RHODIUM_ORE.get())
+        tag(BlockTags.MINEABLE_WITH_PICKAXE).add(ModBlocks.PLATINUM_ORE.get())
     }
 }

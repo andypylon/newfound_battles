@@ -11,6 +11,7 @@ import net.minecraft.tags.BlockTags
 import net.minecraft.tags.TagKey
 import net.minecraft.world.level.biome.Biome
 import net.minecraft.world.level.block.Block
+import net.minecraft.world.level.block.Blocks
 import net.minecraft.world.level.levelgen.GenerationStep
 import net.minecraft.world.level.levelgen.VerticalAnchor
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature
@@ -41,7 +42,9 @@ object ModWorldGen {
         val biomes: TagKey<Biome> = BiomeTags.IS_OVERWORLD,
     )
     val ORES = listOf(
-        OreSpec("tungsten_ore", ModBlocks.TUNGSTEN_ORE, veinSize = 3, veinsPerChunk = 8, minY = 5, maxY = 150),
+        OreSpec("tungsten_ore", ModBlocks.TUNGSTEN_ORE, veinSize = 5, veinsPerChunk = 8, minY = 5, maxY = 150),
+        OreSpec("rhodium_ore", ModBlocks.RHODIUM_ORE, veinSize = 3, veinsPerChunk = 16, minY = -50, maxY = 10, replaces = BlockTags.DEEPSLATE_ORE_REPLACEABLES),
+        OreSpec("platinum_ore", ModBlocks.PLATINUM_ORE, veinSize = 3, veinsPerChunk = 16, minY = -50, maxY = 10, replaces = BlockTags.DEEPSLATE_ORE_REPLACEABLES),
     )
     private fun <T> key(registry: ResourceKey<out Registry<T>>, name: String): ResourceKey<T> =
         ResourceKey.create(registry, ResourceLocation.fromNamespaceAndPath(Newfound_battles.ID, name))

@@ -4,6 +4,16 @@
     "newfound_battles:tungsten_axe",
     "newfound_battles:tungsten_shovel",
     "newfound_battles:tungsten_hoe",
-    "newfound_battles:tungsten_paxel"
+    "newfound_battles:tungsten_paxel",
+    "newfound_battles:alloy_pickaxe",
+    "newfound_battles:alloy_axe",
+    "newfound_battles:alloy_shovel",
+    "newfound_battles:alloy_hoe",
+    "newfound_battles:alloy_paxel",
+    "newfound_battles:debris_alloy_pickaxe",
+    "newfound_battles:debris_alloy_axe",
+    "newfound_battles:debris_alloy_shovel",
+    "newfound_battles:debris_alloy_hoe",
+    "newfound_battles:debris_alloy_paxel"
   ]
 }

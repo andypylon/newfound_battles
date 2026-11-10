@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": {
+      "item": "newfound_battles:raw_platinum"
+    },
+    "R": {
+      "item": "newfound_battles:raw_rhodium"
+    }
+  },
+  "pattern": [
+    "RP"
+  ],
+  "result": {
+    "count": 1,
+    "id": "newfound_battles:platinum_rhodium_amalgate"
+  }
+}

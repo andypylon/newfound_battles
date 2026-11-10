@@ -1,2 +1,4 @@
-// 1.21.1	2026-11-08T23:16:32.705882867	Loot Tables
+// 1.21.1	2026-11-09T20:09:06.759492121	Loot Tables
+2cdf55ab20e2a8d23dc95b0b01728f8f1b9dbf8a data/newfound_battles/loot_table/blocks/platinum_ore.json
+60f38d91a803bfd1e5575cf297755f9beb9398d9 data/newfound_battles/loot_table/blocks/rhodium_ore.json
 77b2dfec2a21be62d00d93a3fcc9721cfb619b00 data/newfound_battles/loot_table/blocks/tungsten_ore.json

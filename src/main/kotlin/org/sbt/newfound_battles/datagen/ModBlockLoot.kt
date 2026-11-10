@@ -24,6 +24,22 @@ class ModBlockLoot(registries: HolderLookup.Provider) :
                     .apply(ApplyBonusCount.addOreBonusCount(registries.holderOrThrow(Enchantments.FORTUNE)))
             ))
         )
+        add(ModBlocks.RHODIUM_ORE.get(), createSilkTouchDispatchTable(
+            ModBlocks.RHODIUM_ORE.get(), applyExplosionDecay(
+                ModBlocks.RHODIUM_ORE.get(), LootItem.lootTableItem(
+                    ModItems.RAW_RHODIUM.get())
+                    .apply(SetItemCountFunction.setCount(UniformGenerator.between(1f, 3f)))
+                    .apply(ApplyBonusCount.addOreBonusCount(registries.holderOrThrow(Enchantments.FORTUNE)))
+            ))
+        )
+        add(ModBlocks.PLATINUM_ORE.get(), createSilkTouchDispatchTable(
+            ModBlocks.PLATINUM_ORE.get(), applyExplosionDecay(
+                ModBlocks.PLATINUM_ORE.get(), LootItem.lootTableItem(
+                    ModItems.RAW_PLATINUM.get())
+                    .apply(SetItemCountFunction.setCount(UniformGenerator.between(1f, 3f)))
+                    .apply(ApplyBonusCount.addOreBonusCount(registries.holderOrThrow(Enchantments.FORTUNE)))
+            ))
+        )
     }
     // tells the provider which blocks must have a loot table
     override fun getKnownBlocks(): Iterable<Block> = ModBlocks.REGISTRY.entries.map { it.get() }

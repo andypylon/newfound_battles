@@ -1,13 +1,13 @@
-// 1.21.1	2026-11-09T13:06:28.633986848	Tags for minecraft:item mod id newfound_battles
-0aadd24a83adc5d007520147a491ae3addd13ef3 data/minecraft/tags/item/enchantable/armor.json
-0459343291c9f5d7b279ad34c558da6576f7db94 data/minecraft/tags/item/enchantable/chest_armor.json
-615f0ccb4bff9a897580275bc2430c2c92610335 data/minecraft/tags/item/enchantable/durability.json
-efbbf3160b556ffd0fad2639d28921aa13d088d5 data/minecraft/tags/item/enchantable/fire_aspect.json
-f53d15dcbf8c4adb8f973c6e3582713346e8a0fc data/minecraft/tags/item/enchantable/foot_armor.json
-dd763e3cb5a2d89b6f513fb5292bc8c41cad0aaa data/minecraft/tags/item/enchantable/head_armor.json
-f2b330f0b887a2069b8472877350cc2c8e813a72 data/minecraft/tags/item/enchantable/leg_armor.json
-1bbd1ee6e491f102ebe849768b91c8b289550d68 data/minecraft/tags/item/enchantable/mining.json
-1bbd1ee6e491f102ebe849768b91c8b289550d68 data/minecraft/tags/item/enchantable/mining_loot.json
-15e2bb4f01d33713f53f817ff2cb13747a427908 data/minecraft/tags/item/enchantable/sharp_weapon.json
-efbbf3160b556ffd0fad2639d28921aa13d088d5 data/minecraft/tags/item/enchantable/sword.json
-15e2bb4f01d33713f53f817ff2cb13747a427908 data/minecraft/tags/item/enchantable/weapon.json
+// 1.21.1	2026-11-10T10:36:47.657085793	Tags for minecraft:item mod id newfound_battles
+42acf16e760e58526fafe7ac8a4aef266afe1c35 data/minecraft/tags/item/enchantable/armor.json
+936aff31b0906603cef0a295e216b9ce21d54b3d data/minecraft/tags/item/enchantable/chest_armor.json
+7081c56d1459f073cc10e7d37ef3e78946851a16 data/minecraft/tags/item/enchantable/durability.json
+abdbe902ca890fb34968d01e084d14b802f58cd2 data/minecraft/tags/item/enchantable/fire_aspect.json
+ef8241144987473e32d32f757c8e3abd1ca3bc0d data/minecraft/tags/item/enchantable/foot_armor.json
+d66df729602d32d5d935c10a49337cfcbe6ecf7f data/minecraft/tags/item/enchantable/head_armor.json
+c7695578a848308dc0a74935a3b54fc8c8adfb62 data/minecraft/tags/item/enchantable/leg_armor.json
+bccfbe90cb66a82dd3723665a7675a94988627ba data/minecraft/tags/item/enchantable/mining.json
+bccfbe90cb66a82dd3723665a7675a94988627ba data/minecraft/tags/item/enchantable/mining_loot.json
+148191ea0dd6785efe06b77fda965bd6f36f78ab data/minecraft/tags/item/enchantable/sharp_weapon.json
+abdbe902ca890fb34968d01e084d14b802f58cd2 data/minecraft/tags/item/enchantable/sword.json
+148191ea0dd6785efe06b77fda965bd6f36f78ab data/minecraft/tags/item/enchantable/weapon.json

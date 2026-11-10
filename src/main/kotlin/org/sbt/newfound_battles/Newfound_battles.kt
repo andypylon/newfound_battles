@@ -80,15 +80,27 @@ object Newfound_battles {
     private fun addCreative(event: BuildCreativeModeTabContentsEvent) {
         if (event.tabKey == CreativeModeTabs.NATURAL_BLOCKS) {
             event.accept(ModItems.TUNGSTEN_ORE_ITEM)
+            event.accept(ModItems.RHODIUM_ORE_ITEM)
+            event.accept(ModItems.PLATINUM_ORE_ITEM)
         }
         if (event.tabKey == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.TUNGSTEN)
             event.accept(ModItems.TUNGSTEN_BAR)
             event.accept(ModItems.TUNGSTEN_NUGGET)
+            event.accept(ModItems.RAW_RHODIUM)
+            event.accept(ModItems.RAW_PLATINUM)
+            event.accept(ModItems.PLATINUM_RHODIUM_AMALGATE)
+            event.accept(ModItems.DEBRIS_RHODIUM_PLATINUM_MIXTURE)
+            event.accept(ModItems.PLATINUM_RHODIUM_ALLOY_BAR)
+            event.accept(ModItems.DEBRIS_ALLOY_BAR)
         }
         if (event.tabKey == CreativeModeTabs.COMBAT) {
             ModItems.TUNGSTEN_ARMOR.forEach { event.accept(it) }
             event.accept(ModItems.TUNGSTEN_SWORD)
+            ModItems.ALLOY_ARMOR.forEach { event.accept(it) }
+            event.accept(ModItems.ALLOY_SWORD)
+            ModItems.DEBRIS_ALLOY_ARMOR.forEach { event.accept(it) }
+            event.accept(ModItems.DEBRIS_ALLOY_SWORD)
         }
         if (event.tabKey == CreativeModeTabs.TOOLS_AND_UTILITIES) {
             event.accept(ModItems.TUNGSTEN_HOE)
@@ -96,6 +108,16 @@ object Newfound_battles {
             event.accept(ModItems.TUNGSTEN_PICKAXE)
             event.accept(ModItems.TUNGSTEN_SHOVEL)
             event.accept(ModItems.TUNGSTEN_PAXEL)
+            event.accept(ModItems.ALLOY_HOE)
+            event.accept(ModItems.ALLOY_AXE)
+            event.accept(ModItems.ALLOY_PICKAXE)
+            event.accept(ModItems.ALLOY_SHOVEL)
+            event.accept(ModItems.ALLOY_PAXEL)
+            event.accept(ModItems.DEBRIS_ALLOY_HOE)
+            event.accept(ModItems.DEBRIS_ALLOY_AXE)
+            event.accept(ModItems.DEBRIS_ALLOY_PICKAXE)
+            event.accept(ModItems.DEBRIS_ALLOY_SHOVEL)
+            event.accept(ModItems.DEBRIS_ALLOY_PAXEL)
         }
     }
 }

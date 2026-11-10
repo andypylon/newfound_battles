@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_platinum_rhodium_amalgate": {
+      "conditions": {
+        "items": [
+          {
+            "items": "newfound_battles:platinum_rhodium_amalgate"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "newfound_battles:platinum_rhodium_alloy_bar_from_platinum_rhodium_amalgate_blasting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_platinum_rhodium_amalgate"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "newfound_battles:platinum_rhodium_alloy_bar_from_platinum_rhodium_amalgate_blasting"
+    ]
+  }
+}

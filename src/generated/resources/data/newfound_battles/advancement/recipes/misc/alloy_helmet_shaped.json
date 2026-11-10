@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_platinum_rhodium_alloy_bar": {
+      "conditions": {
+        "items": [
+          {
+            "items": "newfound_battles:platinum_rhodium_alloy_bar"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "newfound_battles:alloy_helmet_shaped"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_platinum_rhodium_alloy_bar"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "newfound_battles:alloy_helmet_shaped"
+    ]
+  }
+}

@@ -1,10 +1,29 @@
 package org.sbt.newfound_battles.item
 
+import net.minecraft.data.recipes.RecipeCategory
 import net.minecraft.world.item.Items
+import net.minecraft.world.item.crafting.Recipe
 import net.minecraft.world.level.ItemLike
 import org.sbt.newfound_battles.block.ModBlocks
 
 object ModRecipes {
+
+    class Smith(
+        val template: ItemLike, val base: ItemLike, val addition: ItemLike, val result: ItemLike,
+        val category: RecipeCategory = RecipeCategory.COMBAT,
+    )
+
+    fun upgrade(template: ItemLike, addition: ItemLike, from: List<ItemLike>, to: List<ItemLike>,
+                category: RecipeCategory = RecipeCategory.COMBAT): List<Smith> {
+        require(from.size == to.size) { "upgrade lists differ in size: ${from.size} vs ${to.size}" }
+        return from.zip(to) { base, result -> Smith(template, base, addition, result, category) }
+    }
+
+    val SMITHING: List<Smith> =
+        upgrade(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, ModItems.DEBRIS_ALLOY_BAR,
+            ModItems.ALLOY_ARMOR, ModItems.DEBRIS_ALLOY_ARMOR) +
+                upgrade(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, ModItems.DEBRIS_ALLOY_BAR,
+                    ModItems.ALLOY_TOOLS, ModItems.DEBRIS_ALLOY_TOOLS, RecipeCategory.TOOLS)
     // --- smelting ---
     class Smelt(
         val input: ItemLike,
@@ -15,7 +34,9 @@ object ModRecipes {
 
     val SMELTING = listOf(
         Smelt(ModBlocks.TUNGSTEN_ORE, ModItems.TUNGSTEN_BAR),
-        Smelt(ModItems.TUNGSTEN, ModItems.TUNGSTEN_NUGGET)
+        Smelt(ModItems.TUNGSTEN, ModItems.TUNGSTEN_NUGGET),
+        Smelt(ModItems.PLATINUM_RHODIUM_AMALGATE, ModItems.PLATINUM_RHODIUM_ALLOY_BAR),
+        Smelt(ModItems.DEBRIS_RHODIUM_PLATINUM_MIXTURE, ModItems.DEBRIS_ALLOY_BAR)
     )
 
     // --- crafting ---
@@ -68,5 +89,13 @@ object ModRecipes {
          Shapeless(ModItems.TUNGSTEN_PAXEL, mapOf(
            ModItems.TUNGSTEN_PICKAXE to 1, ModItems.TUNGSTEN_AXE to 1,
            ModItems.TUNGSTEN_SHOVEL to 1, ModItems.TUNGSTEN_BAR to 1)),
-           )
+           ) +
+        Shaped(ModItems.PLATINUM_RHODIUM_AMALGATE, listOf("RP"),
+            mapOf('R' to ModItems.RAW_RHODIUM, 'P' to ModItems.RAW_PLATINUM)) +
+        Shaped(ModItems.DEBRIS_RHODIUM_PLATINUM_MIXTURE, listOf("###", "#@#", "###"),
+            mapOf('#' to ModItems.PLATINUM_RHODIUM_AMALGATE, '@' to Items.ANCIENT_DEBRIS)) +
+        armorSet(ModItems.PLATINUM_RHODIUM_ALLOY_BAR, ModItems.ALLOY_HELMET, ModItems.ALLOY_CHESTPLATE, ModItems.ALLOY_LEGGINGS,
+            ModItems.ALLOY_BOOTS) +
+        toolSet(ModItems.PLATINUM_RHODIUM_ALLOY_BAR, Items.STICK, ModItems.ALLOY_SWORD, ModItems.ALLOY_PICKAXE, ModItems.ALLOY_AXE, ModItems.ALLOY_SHOVEL, ModItems.ALLOY_HOE) +
+        listOf(Shapeless(ModItems.ALLOY_PAXEL, mapOf(ModItems.ALLOY_PICKAXE to 1, ModItems.ALLOY_AXE to 1, ModItems.ALLOY_SHOVEL to 1, ModItems.PLATINUM_RHODIUM_ALLOY_BAR to 1)))
 }

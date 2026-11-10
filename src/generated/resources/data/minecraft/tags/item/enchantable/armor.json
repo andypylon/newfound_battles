@@ -3,6 +3,14 @@
     "newfound_battles:tungsten_helmet",
     "newfound_battles:tungsten_chestplate",
     "newfound_battles:tungsten_leggings",
-    "newfound_battles:tungsten_boots"
+    "newfound_battles:tungsten_boots",
+    "newfound_battles:alloy_helmet",
+    "newfound_battles:alloy_chestplate",
+    "newfound_battles:alloy_leggings",
+    "newfound_battles:alloy_boots",
+    "newfound_battles:debris_alloy_helmet",
+    "newfound_battles:debris_alloy_chestplate",
+    "newfound_battles:debris_alloy_leggings",
+    "newfound_battles:debris_alloy_boots"
   ]
 }
